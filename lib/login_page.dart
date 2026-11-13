@@ -1,5 +1,6 @@
 
 import 'package:app_demo/forgotpass_page.dart';
+import 'package:app_demo/list_page.dart';
 import 'package:app_demo/setting_page.dart';
 import 'package:flutter/material.dart';
 import 'register_page.dart';
@@ -29,7 +30,7 @@ class _MyLoginState extends State<MyLogin> {
   }
 
   // Kiểm tra tài khoản
-  if (email == 'admin@husc.edu.vn' && matKhau == '123456') {
+  if (email == 'admin' && matKhau == '123') {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('Đăng nhập thành công!'),
@@ -39,7 +40,7 @@ class _MyLoginState extends State<MyLogin> {
      Navigator.pushReplacement(
     context,
     MaterialPageRoute(
-      builder: (context) => const MySetting(),
+      builder: (context) => const ProductList(),
     ),
   ); 
   } else {
